@@ -3,6 +3,7 @@
   (:predicates
     (have ?c)
     (eaten ?c)
+    (dirty)
   )
   (:action eat
       :parameters (?c)
@@ -14,7 +15,17 @@
   )
   (:action bake
       :parameters (?c)
-      :precondition (and (not (have ?c)))
-      :effect (have ?c)
+      :precondition (and 
+          (not (have ?c))
+          (not (dirty))
+      )
+      :effect (and
+          (have ?c)
+          (dirty)
+      )
+  )
+  (:action clean
+      :precondition (dirty)
+      :effect (not (dirty))
   )
 )
