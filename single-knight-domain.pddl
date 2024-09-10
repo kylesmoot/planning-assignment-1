@@ -1,4 +1,4 @@
-(define (domain single-knight)
+(define (domain knight)
   (:requirements :strips)
   (:predicates
     (at ?p ?x ?y)

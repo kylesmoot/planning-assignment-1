@@ -1,5 +1,5 @@
 (define (problem dual-knights)
-  (:domain single-knight)
+  (:domain knight)
   (:objects 
     knight1 knight2
     x1 x2 x3 x4 x5 x6 x7
